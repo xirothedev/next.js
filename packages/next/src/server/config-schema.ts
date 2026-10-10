@@ -204,6 +204,7 @@ export const experimentalSchema = {
     ])
     .optional(),
   agentFeedback: z.boolean().optional(),
+  bun: z.boolean().optional(),
   turbopackAdditionalRoots: z
     .record(
       z.string(),
