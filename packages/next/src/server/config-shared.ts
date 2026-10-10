@@ -517,6 +517,13 @@ export interface ExperimentalConfig {
    */
   agentFeedback?: boolean
   /**
+   * Run `next start` on the Bun runtime instead of Node.js. The build stays on
+   * Node.js and `NEXT_RUNTIME` stays `nodejs`; Bun is detected at the start
+   * boundary via `process.versions.bun`. No effect if the server is not started
+   * under Bun (a warning is logged and Node.js is used).
+   */
+  bun?: boolean
+  /**
    * Additional filesystem roots that symlinked dependencies may resolve into.
    * Relative paths are resolved from the current working directory.
    *
